@@ -1,101 +1,277 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="utf-8">
-    <meta name="description" content="Prensentación HTML5: Introducción a git">
-    <meta name="keywords" content="git,curso,introducción,2015,hackathon,upm">
-    <meta name="author" content="Jesús Martínez-Barquero Herrada">
-    <title>Introducción a Git - Hackthon UPM 2015</title>
-    <!-- Import reveal.js themes and scripts -->
-    <link rel="stylesheet" href="css/reveal.css">
-    <link rel="stylesheet" href="css/theme/moon.css" id="theme">
-    <!-- Code syntax highlighting -->
-    <link rel="stylesheet" href="lib/css/zenburn.css">
+  <meta charset="utf-8">
+  <meta name="description" content="Prensentación HTML5: Introducción a git"/>
+  <meta name="keywords" content="git,curso,introducción,2015,hackathon,upm"/>
+  <meta name="author" content="Jesús Martínez-Barquero Herrada"/>
+  <meta name="author" content="José Carlos Padial Diaz-Merino"/>
+  <title>Introducción a Git - Hackthon UPM 2015</title>
+  <!-- Import reveal.js themes and scripts -->
+  <link rel="stylesheet" href="css/reveal.css"/>
+  <link rel="stylesheet" href="css/theme/league.css" id="theme"/>
+  <link rel="stylesheet" href="lib/css/zenburn.css"/>
 
-    <!-- Printing and PDF exports -->
-    <script>
-        var link = document.createElement( 'link' );
-        link.rel = 'stylesheet';
-        link.type = 'text/css';
-        link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
-        document.getElementsByTagName( 'head' )[0].appendChild( link );
-    </script>
+  <!-- Printing and PDF exports -->
+  <script>
+    var link = document.createElement( 'link' );
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+    document.getElementsByTagName( 'head' )[0].appendChild( link );
+  </script>
 
-    <!--[if lt IE 9]>
-    <script src="lib/js/html5shiv.js"></script>
-    <![endif]-->
+  <!--[if lt IE 9]>
+  <script src="lib/js/html5shiv.js"></script>
+  <![endif]-->
 </head>
 <body>
-    <div class="reveal">
-        <div class="slides">
-            <section>
-                <img src="images/octocat.png" style="background:none; border:none; box-shadow:none;"/>
-                <h1>Introducción a Git</h1>
-                <h3>Hackathon UPM 2015</h3>
-            </section>
-            <section>
-                <h2>Testing code</h2>
-                <pre><code>
-    var a = function(c,b) {
-        return c+b;
-    }
-                </code></pre>
-            </section>
-            <section>
-                <section>
-                    <h1>TOC (I)</h1>
-                    <ol>
-                        <li>Crear un repositorio</li>
-                        <ol>
-                            <li><i>git status</i></li>
-                            <li><i>git add</i></li>
-                            <li><i>git commit</i></li>
-                            <li><i>git log</i></li>
-                        </ol>
-                    </ol>
-                </section>
-                <section>
-                    <h1>TOC (II)</h1>
-                    <ol>
-                        <li>Repositorios remotos</li>
-                        <ol>
-                            <li>GitHub / GitLab</li>
-                            <li><i>git push</i></li>
-                            <li><i>git pull</i></li>
-                            <li><i>git clone</i></li>
-                        </ol>
-                    </ol>
-                </section>
-                <section>
-                    <h1>TOC (III)</h1>
-                    <ol>
-                        <li>Ramas ("branches")</li>
-                        <ol>
-                            <li><i>git branch</i></li>
-                            <li><i>git checkout</i></li>
-                            <li><i>git merge</i></li>
-                        </ol>
-                    </ol>
-                </section>
-            </section>
-        </div>
-    </div>
-    <script src="lib/js/head.min.js"></script>
-    <script src="js/reveal.js"></script>
-    <script>
-        // Configure reveal.js
-        Reveal.initialize({
-            controls: false,
-            progress: true,
-            history: true,
-            center: true,
-            mouseWheel: true,
-            transition: 'slide',
-            dependencies: [
-                // Syntax highlight for <code> elements
-                { src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
-            ]
-        });
-    </script>
+  <div class="reveal">
+    <div class="slides">
+
+      <section id="intro">
+        <img src="images/octocat.png" style="background:none; border:none; box-shadow:none;"/>
+        <h1>Introducción a Git</h1>
+        <h3><a href="http://tankathon.github.io/" target="_blank">Tankathon UPM 2015</a></h3>
+      </section>
+
+      <section id="git">
+        <h1>¿Git?</h1>
+        <ul>
+          <li>Sistema de control de versiones.</li>
+          <li>Almacena los cambios realizados a ficheros.</li>
+          <li>Permite llevar un control de éstos y acceder a una versión antigua.</li>
+        </ul>
+      </section>
+
+      <section id="como-funciona">
+        <section>
+          <h1>¿Como funciona?</h1>
+        </section>
+
+        <section>
+          <h1>Modelo de datos</h1>
+
+          <p>Otros: Almacena cambios en ficheros</p>
+          <p>Git: Genera instantáneas del proyecto a lo largo del tiempo</p>
+        </section>
+
+        <section>
+           <h1>Trabajo sin conexión</h1>
+           <p>Operaciones locales</p>
+        </section>
+
+        <section>
+          <h1>Integridad</h1>
+          <p>Verificado mediante chekcsum</p>
+          <p>Hash SHA-1</p>
+        </section>
+      </section>
+
+      <section id="instalacion">
+        <section>
+          <h1>Instalación</h1>
+
+        </section>
+        <section>
+          <h2>Linux</h2>
+          <h3>Ubuntu/Debian</h3>
+          <p>sudo apt-get install git</p>
+
+          <h3>Otros</h3>
+          <a href="http://git-scm.com/download/linux">Instrucciones</a>
+        </section>
+
+        <section>
+          <h2>Windows</h2>
+          <a href="http://git-scm.com/download/win">Instalador</a>
+        </section>
+
+        <section>
+          <h2>OSX</h2>
+          <a href="http://git-scm.com/download/mac">Instalador</a>
+        </section>
+      </section>
+
+      <section id="primer-repo">
+        <section>
+          <h1>Mi primer repositorio</h1>
+           <pre><code>
+            git init
+            touch fichero.txt
+            git add fichero.txt
+            git status
+            git commit -m "Initial Commit!"
+           </code></pre>
+        </section>
+
+        <section>
+          <h1>No tan rápido</h1>
+          <p>¿Qué es todo esto?</p>
+        </section>
+
+        <section>
+          <h1>Init</h1>
+          <pre><code>
+          git init
+          </code></pre>
+          <ul>
+            <li>Inicializa el repositorio</li>
+            <li>Crea una carpeta .git</li>
+          </ul>
+        </section>
+
+        <section>
+          <h1>Touch</h1>
+          <pre><code>
+          touch fichero.txt
+          </code></pre>
+          <ul>
+            <li>Crea un fichero (unstaged)</li>
+          </ul>
+        </section>
+
+        <section>
+          <h1>Add</h1>
+          <pre><code>
+          git add fichero.txt
+          </code></pre>
+          <ul>
+            <li>Controla el estado del fichero</li>
+            <li>Añade los cambios para hacer commit (staged)</li>
+          </ul>
+        </section>
+
+        <section>
+          <h1>Status</h1>
+          <pre><code>
+          git status
+          </code></pre>
+          <ul>
+            <li>Muestra el estado del repositorio</li>
+            <ul>
+              <li>Ficheros añadidos</li>
+              <li>Ficheros borrados</li>
+              <li>Ficheros movidos</li>
+            </ul>
+          </ul>
+        </section>
+
+        <section>
+          <h1>Commit</h1>
+          <pre><code>
+          git commit -m "Initial commit!"
+          </code></pre>
+          <ul>
+            <li>Realiza una instantánea de los ficheros</li>
+            <li>Incluye un mensaje</li>
+          </ul>
+        </section>
+
+
+      </section>
+
+      <section id="primer-repo-publica">
+        <section>
+          <h1>¿Qué es un repositorio público?</h1>
+        </section>
+
+        <section>
+          <h2>Posibles servidores Git</h2>
+          <!-- Tabla comparación GitHub, Gitlab, Bitbucket... -->
+          <table>
+            <tr>
+              <th>Servidor</th>
+              <th>Repositorios Públicos</th>
+              <th>Repositorios Privados</th>
+              <th>Colaboradores</th>
+            </tr>
+            <tr>
+              <td><a href="https://github.com/" alt="GiHub.com" target="_blank">GitHub</a></td>
+              <td>Ilimitados</td>
+              <td>0*</td>
+              <td>Ilimitados</td>
+            </tr>
+            <tr>
+              <td><a href="https://bitbucket.org/" alt="BitBucket.org" target="_blank">Bitbucket</a></td>
+              <td>Ilimitados</td>
+              <td>Ilimitados</td>
+              <td>5*</td>
+            </tr>
+            <tr>
+              <td><a href="https://gitlab.com/" alt="GitLab.com" target="_blank">GitLab</a></td>
+              <td>Ilimitados</td>
+              <td>Ilimitados</td>
+              <td>Ilimitados</td>
+            </tr>
+          </table>
+          <p>*Existen planes de subscripción que amplian estas capacidades</p>
+        </section>
+
+        <section>
+          <h2>Crear una cuenta en GitHub</h2>
+          <ol>
+            <li>Entrar en <a href="https://github.com/join" alt="GitHub Sign Up" target="_blank">github.com</a> y rellenamos los datos.</li>
+            <li>Elegimos plan <i><b>Free</b></i>.</li>
+            <li>Configuramos nuestro nombre de usuario: <pre><code>git config --global user.name usuario</code></pre></li>
+            <li>Configuramos nuestro correo: <pre><code>git config --global user.email usuario@gmail.com</code></pre></li>
+          </ol>
+        </section>
+
+        <section>
+          <h3>Crear un repositorio en GitHub (I)</h3>
+          <p>En la barra de tareas superior seleccionamos el símbolo '&plus;' para añadir nuevo repositorio.</p>
+          <img alt="" src="images/createRepo/create_repo_001.png"/>
+        </section>
+
+        <section>
+          <h3>Crear un repositorio en GitHub (II)</h3>
+          <p>Le damos un nombre y una descripción a nuestro proyecto.</p>
+          <img alt="" src="images/createRepo/create_repo_002.png"/>
+          <img alt="" src="images/createRepo/create_repo_003.png"/>
+        </section>
+
+        <section>
+          <h3>Crear un repositorio en GitHub (III)</h3>
+          <p>Elegimos crear un repositorio público y creamos respositorio.</p>
+          <img style="height:250px;" alt="" src="images/createRepo/create_repo_004.png"/>
+          <img alt="" src="images/createRepo/create_repo_006.png"/>
+        </section>
+
+        <section>
+          <h2>Añadimos el respositorio remoto</h2>
+          <p>Para añadir el repositorio como remoto de nuestro repositorio local usaremos:</p>
+          <pre><code>git remote add origin https://github.com/usuario/my-first-repo</code></pre>
+        </section>
+
+        <section>
+          <h2>Subimos los cambios a nuestro repositorio remoto</h2>
+          <p>Para sincronizar nuestro repositorio local con el repositorio remoto que acabamos de crear usamos:</p>
+          <pre><code>git push origin master</code></pre>
+        </section>
+      </section>
+
+      <section id="branches">
+        <section></section>
+        <section></section>
+        <section></section>
+        <section></section>
+      </section>
+      
+    </div> <!-- slides -->
+  </div>
+  <script src="lib/js/head.min.js"></script>
+  <script src="js/reveal.js"></script>
+  <script>
+    // Configure reveal.js
+    Reveal.initialize({
+    controls: true,
+    progress: true,
+    history: true,
+    center: true,
+    mouseWheel: true,
+    transition: 'slide'
+    });
+  </script>
 </body>
 </html>
