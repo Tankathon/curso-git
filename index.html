@@ -256,12 +256,46 @@
       </section>
 
       <section id="branches">
-        <section></section>
-        <section></section>
-        <section></section>
-        <section></section>
+        <section>
+          <h1>¿Qué es un rama?</h1>
+          <p>Una rama representa una linea de desarrollo independiente.</p>
+          <img alt="" src="images/branches001.png" style="height: 360px;"/>
+        </section>
+
+        <section>
+          <h1>git branch</h1>
+          <ul>
+            <li>
+              <p>Lista las ramas locales:</p>
+              <pre><code>git branch</code></pre>
+            </li>
+            <li>
+              <p>Para añadir una nueva rama local:</p>
+              <pre><code>git branch &lt;nombre&gt;</code></pre>
+            </li>
+            <li>
+              <p>Para borrar una rama local:</p>
+              <pre><code>git branch -d &lt;nombre&gt;</code></pre>
+              <p><i>-d</i> borra una rama de forma segura. Si queremos forzar su borrar, usar <i>-D</i>.</p>
+            </li>
+          </ul>
+        </section>
+
+        <section>
+          <h1>Movernos entre ramas</h1>
+          <p>Para movernos entre ramas, utilizamos:</p>
+          <pre><code>git checkout &lt;nombre&gt;</code></pre>
+        </section>
+
+        <section>
+          <h1>Unir ramas:</h1>
+          <p>Para copiar los commits de una rama a otra utilizamos, nos situamos en la rama en la que queremos copiar los cambios y realizamos un <i>merge</i></p>
+          <pre><code>git merge &lt;nombre&gt;</code></pre>
+          <p>El nombre se refiere a la rama de la que queremos copiar. </p>
+        </section>
+
       </section>
-      
+
     </div> <!-- slides -->
   </div>
   <script src="lib/js/head.min.js"></script>
