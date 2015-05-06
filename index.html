@@ -35,6 +35,15 @@
         <h3><a href="http://tankathon.github.io/" target="_blank">Tankathon UPM 2015</a></h3>
       </section>
 
+      <section>
+        <h1>¿Quienes somos?</h1>
+        <ul>
+          <li>Jesús Martinez-Barquero Herrada</li>
+          <li>Pepe Padial Diaz-Merino</li>
+        </ul>
+        <p>Alumnos de la Escuela</p>
+      </section>
+
       <section id="git">
         <h1>¿Git?</h1>
         <ul>
@@ -257,7 +266,73 @@
         <section></section>
         <section></section>
       </section>
-      
+
+      <section id="cambios">
+        <section>
+          <h1>Revisando cambios</h1>
+          <h3>¿Qué he cambiado?</h3>
+          <h3>¿Quién ha roto qué?</h3>
+        </section>
+
+        <section>
+          <h1>Cambios</h1>
+          <pre><code>
+          git log
+          </code></pre>
+          <ul>
+            <li>Lista de últimos commits</li>
+            <li>Autor</li>
+            <li>Fecha</li>
+          </ul>
+        </section>
+
+        <section>
+          <h1>Diferencias</h1>
+          <pre><code>
+          git diff <fichero1> <fichero2>
+          </code></pre>
+          <ul>
+            <li>Cambios entre versiones</li>
+          </ul>
+        </section>
+
+        <section>
+          <h1>¿Quien ha sido?</h1>
+          <pre><code>
+          git blame <fichero>
+          </code></pre>
+          <ul>
+            <li>Información detallada de diferencias (por linea)</li>
+            <ul>
+              <li>Commit</li>
+              <li>Autor</li>
+              <li>Fecha</li>
+            </ul>
+          </ul>
+        </section>
+
+        <section>
+          <h1>Árbol</h1>
+          <pre><code>
+          git log --graph --decorate --oneline --all
+          </code></pre>
+          <ul>
+            <li>Árbol de desarrollo</li>
+            <li>Solamente primera linea del commit (--oneline)</li>
+            <li>Vistazo rápido al estado del repositorio</li>
+          </ul>
+        </section>
+      </section>
+
+      <section>
+        <h1>Recursos</h1>
+        <ul>
+          <li><a href="https://git-scm.com/book/en/v2">Libro oficial (online)</a></li>
+          <li><a href="https://www.atlassian.com/git/tutorials/">Atlassian</a></li>
+          <li><a href="http://www.google.com">Google</a></li>
+        </ul>
+      </section>
+
     </div> <!-- slides -->
   </div>
   <script src="lib/js/head.min.js"></script>
