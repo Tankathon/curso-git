@@ -9,7 +9,7 @@
   <title>Introducción a Git - Hackthon UPM 2015</title>
   <!-- Import reveal.js themes and scripts -->
   <link rel="stylesheet" href="css/reveal.css"/>
-  <link rel="stylesheet" href="css/theme/league.css" id="theme"/>
+  <link rel="stylesheet" href="css/theme/solarized.css" id="theme"/>
   <link rel="stylesheet" href="lib/css/zenburn.css"/>
 
   <!-- Printing and PDF exports -->
@@ -265,7 +265,7 @@
 
       <section id="branches">
         <section>
-          <h1>¿Qué es un rama?</h1>
+          <h1>¿Qué es una rama?</h1>
           <p>Una rama representa una linea de desarrollo independiente.</p>
           <img alt="" src="images/branches001.png" style="height: 360px;"/>
         </section>
@@ -273,15 +273,15 @@
         <section>
           <h1>git branch</h1>
           <ul>
-            <li>
+            <li class="fragment">
               <p>Lista las ramas locales:</p>
               <pre><code>git branch</code></pre>
             </li>
-            <li>
+            <li class="fragment">
               <p>Para añadir una nueva rama local:</p>
               <pre><code>git branch &lt;nombre&gt;</code></pre>
             </li>
-            <li>
+            <li class="fragment">
               <p>Para borrar una rama local:</p>
               <pre><code>git branch -d &lt;nombre&gt;</code></pre>
               <p><i>-d</i> borra una rama de forma segura. Si queremos forzar su borrar, usar <i>-D</i>.</p>
@@ -441,6 +441,7 @@
           <ul>
             <li>Diff/Merge</li>
             <ul>
+              <li>Ediff</li>
               <li>Kdiff3</li>
               <li>Vimdiff</li>
             </ul>
