@@ -397,6 +397,16 @@
             <li>Vistazo rápido al estado del repositorio</li>
           </ul>
         </section>
+
+        <section>
+          <h1>Otras ramas</h1>
+            <p>Aceptan nombre de ramas</p>
+          <ul>
+            <li>Absoluto (master, dev, miRama)</li>
+            <li>Relativo (HEAD, master~1)</li>
+          </ul>
+
+        </section>
       </section>
 
       <section>
@@ -419,6 +429,9 @@
         <section>
           <h1>Alias</h1>
           <pre><code>
+          it config alias.s status
+          </code></pre>
+          <pre class="fragment"><code>
           git config --global alias.s status
           </code></pre>
         </section>
@@ -426,8 +439,11 @@
         <section>
           <h1>Herramientas</h1>
           <ul>
-            <li>Diff</li>
-            <li>Merge</li>
+            <li>Diff/Merge</li>
+            <ul>
+              <li>Kdiff3</li>
+              <li>Vimdiff</li>
+            </ul>
             <li>Clientes con interfaz</li>
               <ul>
                 <li>Gitk</li>
